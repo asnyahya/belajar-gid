@@ -12,3 +12,46 @@ body {
 img {
   width: 100%;
 }
+
+/* Header */
+header {
+  display: grid;
+  grid-template-areas: 'hero feature-1'
+    'hero feature-2';
+}
+
+.hero-image {
+  grid-area: hero;
+  background: url('img/food.jpg') center / cover;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.hero-image>* {
+  display: none;
+}
+
+.features {
+  display: grid;
+  place-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.feature-1 {
+  background: url('img/pizza.jpg') center / cover;
+}
+
+.feature-2 {
+  background: url('img/cake.jpg') center / cover;
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+.item {
+  font-size: 1.1em;
+  font-weight: 200;
+}
