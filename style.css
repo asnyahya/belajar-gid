@@ -5,12 +5,19 @@
 }
 
 body {
+  background-color: #ddd;
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
+  margin: 30px;
 }
 
 img {
   width: 100%;
+}
+
+.container {
+  display: grid;
+  gap: 5px;
 }
 
 /* Header */
@@ -39,19 +46,81 @@ header {
 }
 
 .feature-1 {
+  grid-area: feature-1;
   background: url('img/pizza.jpg') center / cover;
 }
 
 .feature-2 {
+  grid-area: feature-2;
   background: url('img/cake.jpg') center / cover;
 }
 
 .price {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 200;
 }
 
 .item {
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-weight: 200;
 }
+
+/* Navigation */
+nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  order: -1;
+}
+
+nav .brand {
+  color: #333;
+  font-size: 1.4em;
+}
+
+nav .menu {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 5px;
+}
+
+nav li a {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1024px) {
+  nav {
+    grid-template-columns: 1fr;
+    order: 1;
+  }
+
+  nav .brand {
+    display: none;
+  }
+
+  .hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .hero-image>* {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #eee;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width:576px) {}
