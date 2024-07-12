@@ -31,17 +31,30 @@
 
     <!-- Navigation -->
     <nav>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div class="brand">
         <h2>Food Shop</h2>
       </div>
-      <ul class="menu">
+      <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
         <li><a href="#">Service</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </div>
+
+  <!-- My script -->
+  <script>
+    document.querySelector('nav .hamburger-menu').addEventListener('click', function () {
+      document.querySelector('nav .hamburger-menu').classList.toggle('navbar');
+      document.querySelector('nav ul').classList.toggle('active');
+    })
+  </script>
 </body>
 
 </html>
