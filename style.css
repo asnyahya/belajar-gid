@@ -132,7 +132,6 @@ nav li a {
 .about {
   display: grid;
   grid-template-columns: auto auto;
-  order: 2;
   gap: 10px;
   margin-top: 10px;
 }
@@ -152,7 +151,6 @@ nav li a {
 /* Services */
 .services {
   display: grid;
-  order: 3;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
   text-align: center;
@@ -171,7 +169,6 @@ nav li a {
 /* Contact */
 .contact {
   display: grid;
-  order: 3;
   background: url('img/map.jpg') no-repeat center / cover;
   max-height: 200px;
   text-align: center;
@@ -193,7 +190,6 @@ nav li a {
 /* Footer */
 footer {
   display: grid;
-  order: 4;
   grid-template-columns: repeat(3, 1fr);
   background-color: #eee;
   padding: 10px;
@@ -214,7 +210,7 @@ footer p {
 @media only screen and (max-width: 1024px) {
   nav {
     grid-template-columns: 1fr;
-    order: 1;
+    order: inherit;
   }
 
   nav .brand {
@@ -238,10 +234,6 @@ footer p {
 }
 
 @media only screen and (max-width: 768px) {
-  nav {
-    order: -1;
-  }
-
   nav ul {
     position: absolute;
     top: -100%;
